@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #F8F8F8;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/*************************** LEFT *******************************/
+.left {
+    background: #4E5BEE;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 999;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    
+}
+.logo img{
+    width: 400px;
+    height: 50%;
+    position: relative;
+    top: 40%;
+}
+
+/***** FORMULARIO *****/
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 10%;
+}
+.formulario form input{
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    background: #4E5BEE;
+    color: #F8F8F8;
+    padding: 2em;
+    padding-left: 5em;
+    width: 25vw;
+    margin-bottom: 2em;
+    border-radius: 50px;
+    border: 2px solid #F8F8F8;
+    outline: none;
+    
+}
+.formulario form input[type=submit]{
+    background: #F8F8F8;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    margin-left: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    color: black;
+}
+.formulario form input[type=submit]:hover{
+    opacity: 0.5;
+}
+.formulario form i{
+    color: #F8F8F8;
+    position: relative;
+    left: 10%;
+}
+
+
+/*** FOOTER ***/
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #F8F8F8;
+    font-family: sans-serif;
+}
+.footer a{
+    color: #F8F8F8;
+}
+.footer a:hover{
+    color: black;
+}
+
+/*************************** RIGHT **************************/
+
+.right {
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+.right img{
+    position: relative;
+    right: 15%;
+}
+
+
+/************************* RESPONSIVIDADE *******************************/
+
+@media (max-width: 1100px){
+    .right {
+        display: none;
+    }
+    .left {
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .formulario form input{
+        width: 85vw;
+    }
+}
+
+@media (max-width: 400px){
+    .logo img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 300px){
+    .logo img{
+        width: 250px;
+    }
+}
